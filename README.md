@@ -44,6 +44,12 @@
 - Modern JavaScript
 - CSS3
 
+## 插件截图
+![image](https://github.com/user-attachments/assets/b4129091-3d04-4473-be1f-25a94eb4d76f)
+![image](https://github.com/user-attachments/assets/7c73e239-594a-47e0-8aad-595d29fe385b)
+![image](https://github.com/user-attachments/assets/b08bb44e-75fb-40ed-ae56-9a625d925761)
+
+
 ## 作者
 
 刘远利 (Liu Yuanli)
