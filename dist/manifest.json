@@ -1,0 +1,42 @@
+{
+  "manifest_version": 3,
+  "name": "Screenshot Tool",
+  "version": "1.0.0",
+  "description": "A powerful screenshot tool for Chrome. Author: 刘远利 (Liu Yuanli)",
+  "author": "刘远利",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "downloads",
+    "downloads.shelf",
+    "clipboardWrite",
+    "clipboardRead",
+    "scripting",
+    "tabs"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "action": {
+    "default_popup": "popup/popup.html"
+  },
+  "background": {
+    "service_worker": "background/background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": ["styles/content.css"],
+      "js": ["content/content.js"]
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'",
+    "sandbox": "sandbox allow-scripts allow-forms allow-popups allow-modals; script-src 'self' 'unsafe-inline' 'unsafe-eval'; child-src 'self'"
+  },
+  "web_accessible_resources": [{
+    "resources": ["content/*", "styles/*"],
+    "matches": ["<all_urls>"]
+  }]
+} 
